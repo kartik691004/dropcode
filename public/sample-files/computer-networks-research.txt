@@ -1,0 +1,12 @@
+System.Collections.Hashtable(System.Collections.Hashtable.name) - MINI RESEARCH SUMMARY (RANDOM)
+
+Title: Recent Advances in Computer Networks
+Year: 2024
+
+Abstract (student-friendly):
+This summary describes practical improvements, benchmark trends, and real-world use cases related to Computer Networks. It highlights key findings, limitations, and possible exam discussion points.
+
+Key Takeaways:
+- One practical improvement in performance/efficiency.
+- One trade-off in complexity/cost.
+- One future direction for projects.

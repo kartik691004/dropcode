@@ -1,0 +1,7 @@
+OPERATING SYSTEMS - PREVIOUS YEAR QUESTIONS (PRACTICE)
+
+1) Explain Round Robin scheduling with time quantum.
+2) Compare paging and segmentation.
+3) What is deadlock? Explain prevention methods.
+4) Write short note on virtual memory.
+5) Producer-consumer problem with semaphore solution.

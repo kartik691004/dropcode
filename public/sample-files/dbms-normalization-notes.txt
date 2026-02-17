@@ -1,0 +1,17 @@
+DBMS UNIT-3 QUICK NOTES
+
+1) Normalization
+- 1NF: Atomic values
+- 2NF: Remove partial dependency
+- 3NF: Remove transitive dependency
+
+2) Transaction Properties (ACID)
+- Atomicity
+- Consistency
+- Isolation
+- Durability
+
+3) Common Exam Questions
+- Explain 2NF vs 3NF with example.
+- What is serializability?
+- Differentiate clustered and non-clustered index.

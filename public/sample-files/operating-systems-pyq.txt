@@ -1,0 +1,13 @@
+System.Collections.Hashtable(System.Collections.Hashtable.name) - PREVIOUS YEAR QUESTION PRACTICE
+
+2022:
+1) Explain two major concepts with examples.
+2) Compare method A and method B.
+
+2023:
+1) Solve one numerical/problem-based question.
+2) Write short note on architecture/design.
+
+2024:
+1) Long-answer question from unit 3.
+2) Application-based question from unit 2.

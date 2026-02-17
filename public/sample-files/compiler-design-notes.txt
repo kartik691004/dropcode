@@ -1,0 +1,14 @@
+System.Collections.Hashtable(System.Collections.Hashtable.name) - RANDOM NOTES PACK
+
+Unit 1 quick points:
+- Core definitions and terminology.
+- Typical exam-level examples.
+- Common mistakes students make.
+
+Unit 2 quick points:
+- Important formulas / algorithms.
+- Short derivations and memory tricks.
+
+Unit 3 quick points:
+- 5-mark and 10-mark answer patterns.
+- Fast revision checklist.
