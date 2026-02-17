@@ -75,3 +75,29 @@ Backend:
 5. Frontend started on `5173`
 
 If backend is not running, UI opens but API-dependent features (login/upload/search/profile API) will fail.
+
+## 7) Public Deployment (Render)
+
+This repo includes `render.yaml` for one-click full-stack deployment:
+
+- static frontend (`dropcode-web`)
+- Node backend API (`dropcode-api`)
+- PostgreSQL database (`dropcode-db`)
+
+Steps:
+
+1. Push this repo to GitHub
+2. In Render: **New +** -> **Blueprint**
+3. Select this GitHub repo
+4. Render reads `render.yaml` and creates all services
+5. Wait for deployment to complete
+
+After deploy:
+
+- frontend gets a public URL (works for anyone)
+- backend gets a public URL
+- frontend uses backend URL via `VITE_API_BASE`
+
+Note:
+
+- `backend/uploads` is local disk storage; on free cloud dynos this can be ephemeral. For permanent file storage, use S3/Cloudinary later.

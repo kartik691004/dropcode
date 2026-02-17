@@ -10,7 +10,14 @@ const fs = require("fs");
 const { Pool } = require("pg");
 
 const app = express();
-app.use(cors());
+const FRONTEND_ORIGIN = process.env.FRONTEND_ORIGIN || "*";
+const corsOptions = FRONTEND_ORIGIN === "*"
+  ? {}
+  : {
+      origin: FRONTEND_ORIGIN.split(",").map((origin) => origin.trim()).filter(Boolean),
+      credentials: true,
+    };
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const pool = new Pool({

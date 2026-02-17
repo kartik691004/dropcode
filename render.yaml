@@ -1,0 +1,63 @@
+databases:
+  - name: dropcode-db
+    databaseName: psdhospital_management
+    user: dropcode_user
+    plan: free
+
+services:
+  - type: web
+    name: dropcode-api
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: DB_HOST
+        fromDatabase:
+          name: dropcode-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: dropcode-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: dropcode-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: dropcode-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: dropcode-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: FRONTEND_ORIGIN
+        fromService:
+          type: web
+          name: dropcode-web
+          envVarKey: RENDER_EXTERNAL_URL
+
+  - type: web
+    name: dropcode-web
+    runtime: static
+    rootDir: .
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_BASE
+        fromService:
+          type: web
+          name: dropcode-api
+          envVarKey: RENDER_EXTERNAL_URL
